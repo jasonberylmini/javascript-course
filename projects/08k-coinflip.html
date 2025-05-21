@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coinflip</title>
+  </head>
+  <body>
+    <button onclick="
+      guess = 'heads'
+      playGame(guess);
+    ">heads</button>
+    <button onclick="
+      guess = 'tails'
+      playGame(guess);
+    ">tails</button>
+    <script>
+      const randomNumber = Math.random();
+      let result = '';
+      let guess = '';
+      let score = JSON.parse(localStorage.getItem('score')) || {
+        wins: 0,
+        losses: 0
+      };
+
+      function playGame(guess){
+        if(randomNumber<=0.5){
+          result = 'heads';
+        }
+        else
+          result = 'tails';
+
+        result===guess ? console.log('You win!') : console.log('You lose!');
+
+        if(result===guess){
+          score.wins += 1;
+        } else {
+          score.losses += 1;
+        }
+        localStorage.setItem('score', JSON.stringify(score));
+        alert(`score: wins: ${score.wins}, losses: ${score.losses}`);
+      }
+    </script>
+  </body>
+</html>
