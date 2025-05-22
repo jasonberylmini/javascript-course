@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 exercise</title>
+  </head>
+  <body>
+    <!-- 9c exercise -->
+    <!-- <button onclick="
+        document.querySelector('.result').innerHTML = ' You chose: heads'
+      ">heads</button>
+
+    <button onclick="
+      document.querySelector('.result').innerHTML = ' You chose: tails'
+    ">tails</button>
+    <p class="result"></p> -->
+
+    <input class="name-input" placeholder="name" onkeydown="
+      if(event.key === 'Enter'){
+        nameDisplay();
+      }
+    ">
+    <button class="submit-button" onclick="
+      nameDisplay();
+    ">Submit</button>
+    <p class="js-message"></p>
+    <script>
+      function nameDisplay(){
+        const name = document.querySelector('.name-input');
+        document.querySelector('.js-message').innerHTML = `Your name is: ${name.value}`;
+      };
+    </script>
+  </body>
+</html>
