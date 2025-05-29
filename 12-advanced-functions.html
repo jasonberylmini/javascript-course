@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and loops</title>
+  </head>
+  <body>
+    <button onclick="
+
+      " class="js-button">Click</button>
+    <script>
+
+     /*  const buttonElement = document.querySelector('.js-button');
+
+      buttonElement.addEventListener('click', () =>{
+        console.log('click');
+      });
+
+ */
+
+/*
+      function greeting(){
+        console.log('hey');
+      }
+
+      greeting();
+
+      const num = 2;
+      const function1 = function greeting(){
+        console.log('hey bro');
+      };
+
+      console.log(function1);
+      function1();
+*/ 
+
+/*
+      setTimeout(function(){
+        console.log('timeout');
+      }, 3000);
+
+      console.log('next line');
+
+      setInterval(function(){
+        console.log('interval');
+      }, 3000);
+
+      console.log('next line 2');
+      */
+      
+     /*  [
+        'make breakfast',
+        'watch movie',
+        'read books'
+      ].forEach((value, index) => {
+        if(value === 'watch movie'){
+          return;
+        }
+        console.log(index);
+        console.log(value);
+      });
+
+      const regularFunction = function(){
+        console.log('hello');
+      };
+
+      const arrowFunction = () =>{
+        console.log('hello');
+      };
+
+      arrowFunction();
+ */
+
+      console.log([1, -3, 5].filter((value, index) => {
+/*         if(value >=0){
+          return true;
+        }else{
+          return false;
+        }  */
+       return value >= 0;
+      }));
+
+      console.log([1,2,3].map((value, index) =>{
+        return value * 2;
+      }));
+
+      console.log([1,2,3].map(value => value * 2));      
+    </script>
+  </body>
+</html>
