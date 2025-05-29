@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arrays and loops</title>
+</head>
+<body>
+  <script>
+    const nums = [10,20,30];
+    nums.push(99)
+    console.log(nums);
+
+    function getLastValue(array){
+      return array[array.length-1];
+    }
+
+    console.log(getLastValue([1,20,22,24,5]));
+    console.log(getLastValue(['hi','hello','good']));
+
+    function arraySwap(array){
+      const firstElement = array[0];
+      const lastElement = array[array.length-1];
+      array.splice(0,1,lastElement)
+      array.splice(array.length-1, 1, firstElement);
+      return array;
+    }
+
+    console.log(arraySwap([1,20,22,24,5]));
+    console.log(arraySwap(['hi','hello','good']));
+
+    for(let i = 0; i<= 10; i++){
+      if(i%2 === 0){
+        console.log(i);
+      }
+    }
+
+    for(let i = 5; i>=0; i--){
+      console.log(i);
+    }
+
+    let i = 0;
+    while(i<=10){
+      if(i%2 === 0){
+        console.log(i);
+      }
+      i++;
+    }
+
+    const array1 = [1,2,3];
+    let array2 = [];
+    for (let i = 0; i<array1.length;i++){
+      array2.push( 1 + array1[i]);
+    }
+    console.log(array2);
+    
+    function addOne(array){
+      let result = [];
+      for (let i = 0; i<array.length;i++){
+        result.push( 1 + array[i]);
+      }
+      return result;
+    }
+
+    console.log(addOne([1, 2, 3]));
+    console.log(addOne([-2, -1, 0, 99]));
+
+    function addNum(array, num){
+      let result = [];
+      for (let i = 0; i<array.length;i++){
+        result.push( num + array[i]);
+      }
+      return result;
+    }
+    console.log(addNum([1, 2, 3], 2));
+    console.log(addNum([1, 2, 3], 3));
+    console.log(addNum([-2, -1, 0, 99], 2));
+
+    function countPositive(nums){
+      let count = 0;
+      for(let i = 0; i < nums.length; i++){
+        if(nums[i]>0){
+          count++;
+        }
+      }
+      return count;
+    }
+
+    console.log(countPositive([1, -3, 5]));
+    console.log(countPositive([-2, 3, -5, 7, 10]));
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11n</title>
+</head>
+
+<body>
+  <script>
+    function countWords(words) {
+      const objectCount = {};
+      for (let i = 0; i < words.length; i++) {
+        if (!(words[i] in objectCount)) {
+          objectCount[words[i]] = 0;
+          for (let j = 0; j < words.length; j++) {
+            if (words[i] === words[j]) {
+              objectCount[words[i]] += 1;
+            }
+          }
+        }
+      }
+      return objectCount;
+    }
+    console.log(countWords(['apple', 'grape', 'apple', 'apple']));
+    console.log(countWords(['jason','jessica','justin','jeff','jessica','jason','jason','jeff','jeff','jeff']))
+  </script>
+</body>
+
+</html>
+
+//take an array
+//create an object with property name as the value of array.
+//count occurances of each value in an array.
+//store the count value to each property in the object accordingly

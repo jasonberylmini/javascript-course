@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>11o</title>
+</head>
+<body>
+  <script>
+/*     const array1 = ['hello','Jehova','Messiah','Jesus','Immanual','Jehova'];
+    
+    let index = -1;
+    for (let i = 0; i < array1.length; i++){
+      if(array1[i] === 'Jehova'){
+        index = i;
+        break;
+      }
+    }
+    console.log(index);
+
+    function findIndex(array,word){
+      for(let i = 0; i < array.length; i++){
+        if(array[i] === word){
+          return i;
+        }
+      }
+      return -1;
+    };
+
+    console.log(findIndex(array1, 'Jesus')); */
+
+    function removeEgg(foods){
+      let result = [];
+      let count = 2
+      const reversedFoods = foods.slice().reverse();
+      console.log(reversedFoods);
+      for(let i = 0; i < reversedFoods.length; i++){
+        if(reversedFoods[i] === 'egg' && count>0){
+          count--;
+          continue;
+        }
+        result.push(reversedFoods[i]);
+      }
+      return result.reverse();
+    }
+
+  </script>
+</body>
+</html>
