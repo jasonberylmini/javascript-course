@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>advanced functions exercise</title>
+</head>
+<body>
+  <button class="js-finish-button" onclick="
+      changeText();
+    ">Start</button>
+
+    <button onclick="
+          addToCart();
+    ">Add to cart</button>
+
+    <p class="js-message"></p>
+  <script>
+    /* const add = function addition(){
+      console.log(2+3);
+    }
+    add();
+
+    function runTwice(fun){
+      fun();
+      fun();
+    }
+
+    function fun(){
+      console.log('12b')
+    }
+
+    runTwice(add);
+ */
+    function changeText(){
+        const buttonElement = document.querySelector('.js-finish-button');
+
+        buttonElement.innerHTML = 'Loading..'
+        setTimeout(() =>{
+        buttonElement.innerHTML = 'Finished'
+      }, 1000);
+    };
+
+    let timeoutId;
+    function addToCart(){
+      const paraElement = document.querySelector('.js-message');
+      paraElement.innerHTML = 'Added';
+      clearTimeout(timeoutId);
+
+      timeoutId = setTimeout(() => {
+        paraElement.innerHTML = '';
+      },2000)
+
+    }
+  </script>
+</body>
+</html>
