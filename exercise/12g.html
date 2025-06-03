@@ -10,13 +10,20 @@
        message++;
     ">Add</button>
   <button onclick="
-    message--;
+    if(message>0){
+      message--;
+    }
+    if(message === 0){
+      clearInterval(intervalId);
+    }
+
   ">Remove</button>
   <script>
 
     let message = 2;
-    setInterval(() =>{
-      if(document.title === 'App'){
+    
+    intervalId = setInterval(() =>{
+      if(document.title === 'App' && message > 0){
         document.title = `(${message}) New messages`;
       } else {
         document.title = 'App';

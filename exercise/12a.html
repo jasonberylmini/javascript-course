@@ -6,13 +6,9 @@
   <title>advanced functions exercise</title>
 </head>
 <body>
-  <button class="js-finish-button" onclick="
-      changeText();
-    ">Start</button>
+  <button class="js-finish-button">Start</button>
 
-    <button onclick="
-          addToCart();
-    ">Add to cart</button>
+    <button class="js-add-to-cart-button">Add to cart</button>
 
     <p class="js-message"></p>
   <script>
@@ -32,26 +28,26 @@
 
     runTwice(add);
  */
-    function changeText(){
-        const buttonElement = document.querySelector('.js-finish-button');
+const buttonElement = document.querySelector('.js-finish-button');
 
-        buttonElement.innerHTML = 'Loading..'
-        setTimeout(() =>{
-        buttonElement.innerHTML = 'Finished'
-      }, 1000);
-    };
+buttonElement.addEventListener('click',() =>{
+  buttonElement.innerHTML = 'Loading..'
+  setTimeout(() =>{
+      buttonElement.innerHTML = 'Finished'
+    }, 1000);
+});
 
-    let timeoutId;
-    function addToCart(){
-      const paraElement = document.querySelector('.js-message');
-      paraElement.innerHTML = 'Added';
+let timeoutId;
+const paraElement = document.querySelector('.js-add-to-cart-button');
+
+  paraElement.addEventListener('click',()=>{
+      document.querySelector('.js-message').innerHTML = 'Added';
       clearTimeout(timeoutId);
 
       timeoutId = setTimeout(() => {
-        paraElement.innerHTML = '';
+         document.querySelector('.js-message').innerHTML = '';
       },2000)
-
-    }
+  })
   </script>
 </body>
 </html>
