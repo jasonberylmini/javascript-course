@@ -656,5 +656,21 @@ export const products = [
       "apparel",
       "mens"
     ]
+  },
+  {
+    id: "id1",
+    image: "images/products/a8bf008d-3e5e-4a4a-9fd3-50aab1bcb7cb.png",
+    name: "Semi-acoustic guitar",
+    rating: {
+      stars: 4.5,
+      count: 3157
+    },
+    priceCents: 9400,
+    keywords: [
+      "guitar",
+      "capo",
+      "acoustic",
+      "instruments"
+    ]
   }
 ];
